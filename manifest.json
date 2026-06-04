@@ -1,6 +1,6 @@
 {
-    "name": "deskbuddy",
-    "short_name": "deskbuddy",
+    "name": "deskbuddy_desktop",
+    "short_name": "deskbuddy_desktop",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
