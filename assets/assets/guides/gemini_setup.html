@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI / Gemini Setup</title>
+<style>
+  :root { --bg:#0D0F14; --card:#161921; --border:#252933; --yellow:#F7C948; --purple:#B490F5; --green:#50E3A4; --blue:#7ED3F7; --text:#E8EAF0; --muted:#6B7180; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, sans-serif; padding: 20px 16px 40px; }
+  h1 { font-size: 22px; color: var(--purple); margin-bottom: 6px; }
+  .sub { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  .step { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
+  .num { background: var(--purple); color: #fff; font-weight: 800; font-size: 14px; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .step-body h3 { font-size: 15px; margin-bottom: 4px; }
+  .step-body p { color: var(--muted); font-size: 13px; line-height: 1.5; }
+  .tip { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; margin: 24px 0 0; }
+  .tip-title { color: var(--green); font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+  .tip p { color: var(--muted); font-size: 13px; line-height: 1.5; }
+  code { background: var(--border); color: var(--blue); padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+  .badge { display: inline-block; background: var(--green); color: #000; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-bottom: 6px; }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+</style>
+</head>
+<body>
+<h1>🤖 AI Assistant Setup</h1>
+<p class="sub">DeskBuddy AI works out of the box using DuckDuckGo + Wikipedia. Add a Gemini API key for smarter, more detailed answers.</p>
+
+<div class="step">
+  <div class="num">1</div>
+  <div class="step-body">
+    <h3>No setup required for basic search</h3>
+    <p>The AI tab works immediately. Ask about weather, facts, people, history — it uses DuckDuckGo and Wikipedia automatically. No account needed.</p>
+  </div>
+</div>
+
+<hr class="divider">
+<p style="color:var(--purple);font-weight:700;font-size:14px;margin-bottom:16px;">Optional: Gemini API for smarter answers</p>
+
+<div class="step">
+  <div class="num">2</div>
+  <div class="step-body">
+    <h3>Get a free Gemini API key</h3>
+    <p>Go to <code>aistudio.google.com</code> → sign in with Google → click <strong>Get API Key</strong> → <strong>Create API key</strong>. Copy the key.</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="num">3</div>
+  <div class="step-body">
+    <h3>Paste it in Settings</h3>
+    <p>Open the <strong>Settings tab</strong> in DeskBuddy → scroll to <strong>AI / Gemini</strong> → paste your key and tap Save. The AI tab will now use Gemini first.</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="num">4</div>
+  <div class="step-body">
+    <h3>Test it</h3>
+    <p>Go to the AI tab and ask: <em>"Explain quantum computing in one sentence"</em>. If you see the purple <strong>Gemini</strong> badge on the answer, it's working!</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="tip">
+  <p class="tip-title">🔑 Free tier limits</p>
+  <p>Gemini Flash gives 15 free requests/minute and 1 million tokens/day on the free tier — plenty for daily use. The key is stored only on your device.</p>
+</div>
+
+<div class="tip" style="margin-top:12px;">
+  <p class="tip-title">💡 What each source means</p>
+  <p>
+    <span class="badge">Web</span> DuckDuckGo HTML scrape — most current info<br><br>
+    <span class="badge" style="background:var(--blue)">Wikipedia</span> Wikipedia REST API — facts &amp; history<br><br>
+    <span class="badge" style="background:var(--purple);color:#fff">Gemini</span> Google Gemini Flash — intelligent answers<br><br>
+    <span class="badge" style="background:var(--yellow)">Weather</span> wttr.in — current weather data
+  </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telegram Chat Setup</title>
+<style>
+  :root { --bg:#0D0F14; --card:#161921; --border:#252933; --yellow:#F7C948; --green:#50E3A4; --blue:#7ED3F7; --text:#E8EAF0; --muted:#6B7180; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, sans-serif; padding: 20px 16px 40px; }
+  h1 { font-size: 22px; color: var(--yellow); margin-bottom: 6px; }
+  .sub { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  .step { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
+  .num { background: var(--yellow); color: #000; font-weight: 800; font-size: 14px; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .step-body h3 { font-size: 15px; margin-bottom: 4px; }
+  .step-body p { color: var(--muted); font-size: 13px; line-height: 1.5; }
+  .tip { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; margin: 24px 0 0; }
+  .tip-title { color: var(--green); font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+  .tip p { color: var(--muted); font-size: 13px; line-height: 1.5; }
+  code { background: var(--border); color: var(--blue); padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+</style>
+</head>
+<body>
+<h1>💬 Telegram Chat Setup</h1>
+<p class="sub">Send messages from your phone to a friend's DeskBuddy via Telegram relay.</p>
+
+<div class="step">
+  <div class="num">1</div>
+  <div class="step-body">
+    <h3>Tap "Activate DeskBuddy Chat"</h3>
+    <p>This opens Telegram with the DeskBuddy bot. If Telegram isn't installed, install it first from the Play Store.</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="num">2</div>
+  <div class="step-body">
+    <h3>Send /start in Telegram</h3>
+    <p>Once Telegram opens, just tap the <strong>Start</strong> button or send <code>/start</code>. Then come back to the DeskBuddy app.</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="num">3</div>
+  <div class="step-body">
+    <h3>Wait for verification</h3>
+    <p>The app polls Telegram every 5 seconds. Within 15 seconds it should say <strong>Chat Ready ✓</strong>. If it times out, tap Activate again.</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="num">4</div>
+  <div class="step-body">
+    <h3>Share your Device ID</h3>
+    <p>Tap the <strong>QR code icon</strong> to show your Device ID (looks like <code>DB_A1B2C3D4</code>). Share this with the friend you want to chat with.</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="num">5</div>
+  <div class="step-body">
+    <h3>Add a contact</h3>
+    <p>Tap <strong>Add Contact</strong>, enter your friend's Device ID and give them a name. Now you can message each other's DeskBuddies!</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="tip">
+  <p class="tip-title">⚡ How it works</p>
+  <p>Messages are relayed privately through the DeskBuddy Telegram bot. Your contacts only see the DeskBuddy app — not your Telegram account. Messages appear on your friend's OLED screen directly via BLE.</p>
+</div>
+
+<div class="tip" style="margin-top:12px;">
+  <p class="tip-title">🔒 Privacy</p>
+  <p>The bot only stores your Device ID and chat ID. No personal data, no message history is saved on any server. Messages are deleted from Telegram after delivery.</p>
+</div>
+</body>
+</html>
